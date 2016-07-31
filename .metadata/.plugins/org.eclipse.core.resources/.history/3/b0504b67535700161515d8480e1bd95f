@@ -20,12 +20,12 @@ int [][] number = new int [10][10];
    try {
       //FileReader fr=new FileReader(file);
       // BufferedReader bf=new BufferedReader(fr);
-	   //InputStream scanner=new BufferedInputStream(new FileInputStream("what.txt"));
-       Scanner scanner = new Scanner(new File("what.txt"));
+	   InputStream scanner=new BufferedInputStream(new FileInputStream("what.txt"));
+      // Scanner scanner = new Scanner(new File("what.txt"));
        int data;
         
        int j=0;
-       while(scanner.hasNext()){
+       while(scanner.){
            //String[] parts=data.split(",");
            //String[][]pa = null;
            for(int i=0;i<10;i++){
