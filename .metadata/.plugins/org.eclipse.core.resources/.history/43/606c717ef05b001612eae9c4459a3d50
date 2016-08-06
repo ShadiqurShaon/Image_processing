@@ -1,0 +1,36 @@
+package du.iit.dhaka;
+
+public class RecartionDFS {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		int[][] Graph = {  { 0, 1, 0, 1, 0, 0, 0, 0, 1 },  // 0
+				{ 1, 0, 0, 0, 0, 0, 0, 1, 0 },  // 1
+				{ 0, 0, 0, 1, 0, 1, 0, 1, 0 },  // 2
+				{ 1, 0, 1, 0, 1, 0, 0, 0, 0 },  // 3
+				{ 0, 0, 0, 1, 0, 0, 0, 0, 1 },  // 4
+				{ 0, 0, 1, 0, 0, 0, 1, 0, 0 },  // 5
+				{ 0, 0, 0, 0, 0, 1, 0, 0, 0 },  // 6
+				{ 0, 1, 1, 0, 0, 0, 0, 0, 0 },  // 7
+				{ 1, 0, 0, 0, 1, 0, 0, 0, 0 } };// 8
+		
+		 int[][]  adjMatrix=new int[Graph.length][Graph.length];
+		 boolean[] visited=new boolean[Graph.length];
+		 for (int i = 0; i <  adjMatrix.length; i++) {
+			for (int j = 0; j <  adjMatrix.length; j++) {
+				
+				adjMatrix[j][i]=Graph[j][i];
+			}
+		}
+		 for (int i = 0; i < adjMatrix.length; i++) {
+			 for (int j = 0; j < visited.length; j++) {
+				 System.out.println(adjMatrix[i][j]);
+			}
+			//System.out.println(adjMatrix[i].toString());
+		}
+
+	}
+
+}

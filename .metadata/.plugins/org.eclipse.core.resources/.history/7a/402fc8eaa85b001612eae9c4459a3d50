@@ -1,0 +1,26 @@
+package du.iit.dhaka;
+
+import java.security.PublicKey;
+
+public class Recarsion {
+
+	public static int recursive(int number){
+		
+		if(number<=1){
+			
+		return number;
+	}
+		
+		return number*recursive(number-1);
+		
+	}
+	public static void main(String[] args) {
+		
+	System.out.println(recursive(3));
+			
+			
+		
+
+	}
+
+}
