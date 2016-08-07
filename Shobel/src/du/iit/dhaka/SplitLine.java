@@ -49,24 +49,28 @@ public class SplitLine {
 	                
 	                //System.out.println(imageVlaue);
 	                if(imageVlaue==255){
-	                	imgmat[j][i]=;
+	                	imgmat2[j][i]=255;
+	                }else{
+	                	imgmat2[j][i]=0;
 	                }
 	                
 	                System.out.println(count);
 	                imgmat[j][i]=c.getRGB();
 	                
 	                
-	                if(count>=40){
-	                	for (int k = 0; k < width; k++) {
-							imgmat[k][i]=new Color(0,0,0).getRGB();
-						}
-	                	
-	                }
-	                
-	                //arr.add(imageVlaue);
 	                
 	             }
 	          }
+	         
+	         
+	         for (int i = 0; i < imgmat2.length; i++) {
+				for (int j = 0; j < imgmat2.length; j++) {
+					
+				}
+			}
+	         
+	         
+	         
 	         
 BufferedImage outputImg=new BufferedImage(width, height, BufferedImage.TYPE_INT_RGB);
 	         

@@ -19,15 +19,15 @@ public class RecartionDFS {
 		 
 	 }
 	public static void main(String[] args) {
-		int[][] Graph = {  { 0, 1, 0, 1, 0, 0, 0, 0, 1 },  // 0
-				{ 1, 0, 0, 0, 0, 0, 0, 1, 0 },  // 1
-				{ 0, 0, 0, 1, 0, 1, 0, 1, 0 },  // 2
-				{ 1, 0, 1, 0, 1, 0, 0, 0, 0 },  // 3
-				{ 0, 0, 0, 1, 0, 0, 0, 0, 1 },  // 4
-				{ 0, 0, 1, 0, 0, 0, 1, 0, 0 },  // 5
-				{ 0, 0, 0, 0, 0, 1, 0, 0, 0 },  // 6
-				{ 0, 1, 1, 0, 0, 0, 0, 0, 0 },  // 7
-				{ 1, 0, 0, 0, 1, 0, 0, 0, 0 } };// 8
+		int[][] Graph = {{ 0, 0, 0, 1, 0, 0, 0, 0, 1 },  // 0
+						{ 1, 0, 0, 0, 0, 0, 0, 1, 0 },  // 1
+						{ 0, 0, 0, 1, 0, 1, 0, 1, 0 },  // 2
+						{ 1, 0, 0, 0, 1, 0, 0, 0, 0 },  // 3
+						{ 0, 0, 0, 1, 0, 0, 0, 0, 1 },  // 4
+						{ 0, 0, 1, 0, 0, 0, 1, 0, 0 },  // 5
+						{ 0, 0, 0, 0, 0, 1, 0, 0, 0 },  // 6
+						{ 0, 1, 1, 0, 0, 0, 0, 0, 0 },  // 7
+						{ 1, 0, 0, 0, 1, 0, 0, 0, 0 } };// 8
 		
 		 int[][]  adjMatrix=new int[Graph.length][Graph.length];
 		 boolean[] visited=new boolean[Graph.length];
@@ -39,8 +39,12 @@ public class RecartionDFS {
 				adjMatrix[i][j]=Graph[i][j];
 			}
 		}
+		 for (int i = 0; i < adjMatrix.length; i++) {
+			 if(!visited[i]){
+			 dfs(i,adjMatrix,visited);
+			 }
+		}
 		 
-		 dfs(0,adjMatrix,visited);
 		
 	}
 
