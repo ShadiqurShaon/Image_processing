@@ -6,6 +6,7 @@ import java.awt.image.BufferedImage;
 import java.io.*;
 
 import javax.imageio.ImageIO;
+import javax.swing.JFileChooser;
 
 
 class Pixel {
@@ -15,7 +16,11 @@ class Pixel {
    
    public Pixel() {
       try {
-         File input = new File("smiley.png");
+    	  
+    		JFileChooser fc=new JFileChooser();
+   		 	fc.showOpenDialog(fc);
+   		 	
+         File input = fc.getSelectedFile();
          image = ImageIO.read(input);
          width = image.getWidth();
          height = image.getHeight();

@@ -31,7 +31,7 @@ public class Test123
 		{
 			e.printStackTrace();
 		}
-		System.out.println("Dataset Size "+Dataset.size());
+		//#System.out.println("Dataset Size "+Dataset.size());
 
 		double node_values[][] = new double[record_size][]; //jagged array used to store values
 		int node_indexes[][] = new int[record_size][];//jagged array used to store node indexes
@@ -67,7 +67,7 @@ public class Test123
 				{
 					node_indexes[i][m] = list_indx.get(m);
 					node_values[i][m] = list_val.get(m); 
-					System.out.println("List Index value "+list_indx.get(m)+"  <=> List values "+list_val.get(m)+"  list size "+list_indx.size());
+					//#System.out.println("List Index value "+list_indx.get(m)+"  <=> List values "+list_val.get(m)+"  list size "+list_indx.size());
 				}
 			}
 			catch(Exception e)
@@ -134,7 +134,7 @@ public class Test123
 		{ 
 			e.printStackTrace(); 
 		} 
-		System.out.println("Dataset Size "+Dataset.size());
+		//#System.out.println("Dataset Size "+Dataset.size());
 
 		double node_values[][] = new double[record_size][]; //jagged array used to store values 
 		int node_indexes[][] = new int[record_size][];//jagged array used to store node indexes 
@@ -156,7 +156,7 @@ public class Test123
 					{ 
 						list_indx.add(Integer.parseInt(tmp_data[0].trim())); 
 						list_val.add(Double.parseDouble(tmp_data[1].trim())); 
-						System.out.println("Index  "+tmp_data[0]+" Value "+tmp_data[1]); 
+						//#System.out.println("Index  "+tmp_data[0]+" Value "+tmp_data[1]); 
 					} 
 				} 
 				if(list_val.size()>0) 
@@ -168,7 +168,7 @@ public class Test123
 				{ 
 					node_indexes[i][m] = list_indx.get(m); 
 					node_values[i][m] = list_val.get(m); 
-					System.out.println("List Index value "+list_indx.get(m)+"  <=> List values "+list_val.get(m)+"  list size "+list_indx.size()); 
+					//#System.out.println("List Index value "+list_indx.get(m)+"  <=> List values "+list_val.get(m)+"  list size "+list_indx.size()); 
 				} 
 			} 
 			catch(Exception e) 
@@ -206,18 +206,18 @@ public class Test123
 
 		for (int i = 0; i < totalClasses; i++)
 		{
-			System.out.print("(" + labels[i] + ":" + prob_estimates[i] + ")");
+			//#System.out.print("(" + labels[i] + ":" + prob_estimates[i] + ")");
 		}
 		System.out.println(" Prediction:" + v );                       
 	}
 
-	public static void main(String[] args) 
+	public  void predict() 
 	{
 		Test123 t123 = new Test123();
 
-		svm_model model2 = t123.svmTrain("sonar_scale_train.txt", 208, 60); 
+		svm_model model2 = t123.svmTrain("D:/Image/train.txt", 121, 256); 
 
-		t123.evaluate_all_instances("sonar_test.txt", model2, 10);
+		t123.evaluate_all_instances("D:/Image/test.txt", model2, 1);
 
 		System.out.println("Operation complete");
 	}
