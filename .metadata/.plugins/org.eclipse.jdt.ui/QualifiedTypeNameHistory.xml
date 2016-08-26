@@ -33,5 +33,8 @@
 <fullyQualifiedTypeName name="java.io.BufferedWriter"/>
 <fullyQualifiedTypeName name="java.io.OutputStreamWriter"/>
 <fullyQualifiedTypeName name="java.io.FileOutputStream"/>
+<fullyQualifiedTypeName name="LbpMain"/>
+<fullyQualifiedTypeName name="Test123"/>
+<fullyQualifiedTypeName name="du.iit.dhaka.GuiInputOt"/>
 <fullyQualifiedTypeName name="java.lang.String"/>
 </qualifiedTypeNameHistroy>

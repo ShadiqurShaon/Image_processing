@@ -1338,8 +1338,7 @@ public class svm {
 			sum_alpha += alpha[i];
 
 		if (Cp==Cn)
-			 
-			//svm.info("nu = "+sum_alpha/(Cp*prob.l)+"\n");
+			svm.info("nu = "+sum_alpha/(Cp*prob.l)+"\n");
 
 		for(i=0;i<l;i++)
 			alpha[i] *= y[i];

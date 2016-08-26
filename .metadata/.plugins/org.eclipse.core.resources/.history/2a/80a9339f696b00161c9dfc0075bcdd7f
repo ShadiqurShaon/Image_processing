@@ -20,8 +20,7 @@ public class GuiInput {
 //			  if(s.contains(args[0])){
 //				  System.out.println("FOUND BOSSS");
 //			  }
-			 GuiInputOt ot=new GuiInputOt();
-			 ot.print(args[0]);
+			  System.out.println(args[0]);
 			  
 	//	}
 		//System.out.println(args[0]);
