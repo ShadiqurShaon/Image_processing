@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy element &apos;LbpMain.java&apos; to &apos;LTP/src/ltp.feature.extract&apos;&#x0D;&#x0A;- Original project: &apos;java&apos;&#x0D;&#x0A;- Destination element: &apos;LTP/src/ltp.feature.extract&apos;&#x0D;&#x0A;- Original element: &apos;LbpMain.java&apos;" description="Copy compilation unit" destination="=LTP/src&lt;ltp.feature.extract" element1="/&lt;{LbpMain.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1474898494086" units="1" version="1.0"/>
+</session>
