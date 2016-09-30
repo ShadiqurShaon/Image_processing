@@ -14,8 +14,9 @@ public class Jfile {
 	public static void main(String[] args) {
 		JFileChooser fc=new JFileChooser();
 		 fc.showOpenDialog(fc);
-		File file = fc.getSelectedFile();
+		//File file = fc.getSelectedFile();
 		//String s=fc.getSelectedFile();
+		 File file=fc.getCurrentDirectory();
 		System.out.println(file);
 
 	}

@@ -38,4 +38,7 @@
 <fullyQualifiedTypeName name="du.iit.dhaka.GuiInputOt"/>
 <fullyQualifiedTypeName name="java.lang.String"/>
 <fullyQualifiedTypeName name="ltp.feature.extract.LbpMain"/>
+<fullyQualifiedTypeName name="java.lang.Math"/>
+<fullyQualifiedTypeName name="lbp.Uniform.uniformLbpMain"/>
+<fullyQualifiedTypeName name="feature.lbp.LbpMain"/>
 </qualifiedTypeNameHistroy>
