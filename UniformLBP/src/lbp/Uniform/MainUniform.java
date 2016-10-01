@@ -11,7 +11,7 @@ public class MainUniform {
 	 */
 	public static void main(String[] args) throws IOException {
 		uniformLbpMain uniform=new uniformLbpMain();
-		uniform.Lbp();
+		uniform.UniformLbp();
 
 	}
 

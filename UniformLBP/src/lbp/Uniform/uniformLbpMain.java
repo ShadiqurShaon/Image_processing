@@ -23,16 +23,26 @@ public class uniformLbpMain {
 	 * @param args
 	 * @throws IOException 
 	 */
-	public void Lbp() throws IOException {
+	public void UniformLbp() throws IOException {
 		//ArrayList<Integer> histogram = new ArrayList<Integer>();
-
+		JFileChooser fc=new JFileChooser();
+		 fc.showOpenDialog(fc);
+		//File folder = new File("D:/Image/bubbly1");
+		 File folder =fc.getCurrentDirectory();
+		File[] listOfFiles = folder.listFiles();
+		
+		for (int index = 0; index < listOfFiles.length; index++) {
+		
+			
+			  File file = listOfFiles[index];
+			  System.out.println(file.getName());
 		BufferedImage image;
 		int width;
 		int height;
-		JFileChooser fc=new JFileChooser();
-		 	fc.showOpenDialog(fc);
-		 	
-     File file = fc.getSelectedFile();
+//		JFileChooser fc=new JFileChooser();
+//		 	fc.showOpenDialog(fc);
+//		 	
+//     File file = fc.getSelectedFile();
 		//File file=new File(pictureName);
 		int[] histogram=new int[256];
 		image = ImageIO.read(file);
@@ -224,5 +234,5 @@ public class uniformLbpMain {
 
 
 	}
-
+	}
 }
