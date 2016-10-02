@@ -44,7 +44,7 @@ public class uniformLbpMain {
 //		 	
 //     File file = fc.getSelectedFile();
 		//File file=new File(pictureName);
-		int[] histogram=new int[256];
+		int[] histogram=new int[257];
 		image = ImageIO.read(file);
 		width = image.getWidth();
 		height = image.getHeight();
@@ -160,8 +160,8 @@ public class uniformLbpMain {
 					imagefile[j][i]=decimalNumber;
 					System.out.println(decimalNumber);
 				}else{
-					imagefile[j][i]= 277;
-					System.out.println(277);
+					imagefile[j][i]= 256;
+					//System.out.println(277);
 				}
 				
 				
@@ -200,7 +200,7 @@ public class uniformLbpMain {
 
 		//this part is for count histogram
 		int count1=0;
-		for (int k = 0; k <256; k++) {
+		for (int k = 0; k <257; k++) {
 
 			int count=0;
 			for (int k2 = 0; k2 < height; k2++) {
@@ -216,12 +216,12 @@ public class uniformLbpMain {
 			histogram[k]=count;
 			}
 		}
-		PrintWriter writer = new PrintWriter("D:/image/test.txt", "UTF-8");
-//		Writer writer = new BufferedWriter(new OutputStreamWriter(
-//				new FileOutputStream("D:/image/test.txt", true), "UTF-8"));
+		//PrintWriter writer = new PrintWriter("D:/image/test.txt", "UTF-8");
+		Writer writer = new BufferedWriter(new OutputStreamWriter(
+			new FileOutputStream("D:/image/uniformtest.txt", true), "UTF-8"));
 		String s="";
 		
-		for (int k = 0; k < 256; k++) {
+		for (int k = 0; k < 257; k++) {
 			//System.out.println(k+" "+histogram.get(k));
 			if(histogram[k]!=0){
 			s=s+k+"#"+histogram[k]+" ";
@@ -229,7 +229,7 @@ public class uniformLbpMain {
 			}
 		}
 		System.out.println(count1);
-		 writer.println(s);
+		writer.append(s+"\n");
 		writer.close();
 
 

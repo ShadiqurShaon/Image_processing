@@ -189,8 +189,8 @@ public class LbpTrain {
 				histogram[k]=count;
 			}
 	         Writer writer = new BufferedWriter(new OutputStreamWriter(
-				        new FileOutputStream("D:/image/train2.txt", true), "UTF-8"));
-	        String s="3 ";
+				        new FileOutputStream("D:/image/trainlbp.txt", true), "UTF-8"));
+	        String s="1 ";
 	         for (int k = 0; k < 256; k++) {
 				//System.out.println(k+" "+histogram.get(k));
 	        	 s=s+k+"#"+histogram[k]+" ";

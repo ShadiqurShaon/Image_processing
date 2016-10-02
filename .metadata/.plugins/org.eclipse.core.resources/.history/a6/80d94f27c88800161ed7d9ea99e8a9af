@@ -1,4 +1,4 @@
-package ltp.feature.extract;
+package du.iit.dhaka;
 
 
 import java.awt.Color;
@@ -17,24 +17,34 @@ import javax.swing.JFileChooser;
 
 
 
-public class LbpMain {
+public class uniformLbpMain {
 
 	/**
 	 * @param args
 	 * @throws IOException 
 	 */
-	public void Lbp() throws IOException {
+	public void UniformLbp() throws IOException {
 		//ArrayList<Integer> histogram = new ArrayList<Integer>();
-
+		JFileChooser fc=new JFileChooser();
+		 fc.showOpenDialog(fc);
+		//File folder = new File("D:/Image/bubbly1");
+		 File folder =fc.getCurrentDirectory();
+		File[] listOfFiles = folder.listFiles();
+		
+		for (int index = 0; index < listOfFiles.length; index++) {
+		
+			
+			  File file = listOfFiles[index];
+			  System.out.println(file.getName());
 		BufferedImage image;
 		int width;
 		int height;
-		JFileChooser fc=new JFileChooser();
-		 	fc.showOpenDialog(fc);
-		 	
-     File file = fc.getSelectedFile();
+//		JFileChooser fc=new JFileChooser();
+//		 	fc.showOpenDialog(fc);
+//		 	
+//     File file = fc.getSelectedFile();
 		//File file=new File(pictureName);
-		int[] histogram=new int[256];
+		int[] histogram=new int[257];
 		image = ImageIO.read(file);
 		width = image.getWidth();
 		height = image.getHeight();
@@ -56,7 +66,7 @@ public class LbpMain {
        		 int blue = c.getBlue();
        		 
        		 int tem=(red+green+blue)/3;
-       		imgval[j][i]=tem;
+       		 gray[j][i]=tem;
 
        	 }
         }
@@ -75,10 +85,10 @@ public class LbpMain {
 				Color newColor = new Color(red+green+blue,
 
 						red+green+blue,red+green+blue);
-				int tem=newColor.getRGB();
+				int tem=(newColor.getRed()+newColor.getGreen()+newColor.getBlue())/3;
 				imgval[j][i]=tem;
 				// arr.add(imageVlaue/3);
-				 System.out.println(tem);
+				// System.out.println(tem);
 			}
 		}
 
@@ -126,17 +136,38 @@ public class LbpMain {
 
 				}
 
-				String s=null;
-				String y = "0";
-				for(int i1=0;i1<binaryarray.length;i1++){
-					s=String.valueOf(binaryarray[i1]);
-
-					y=y+s;
-
+				
+				
+				int count=0;
+				for (int i1 = 0; i1 < binaryarray.length-1; i1++) {
+					if(binaryarray[i1]!=binaryarray[i1+1]){
+						count++;
+					}
+					
 				}
-				int decimalNumber = Integer.parseInt(y,2);
+				
+				if(count<=2){
+					String s=null;
+					String y = "0";
+					for(int i1=0;i1<binaryarray.length;i1++){
+						s=String.valueOf(binaryarray[i1]);
 
-				imagefile[j][i]=decimalNumber;
+						y=y+s;
+
+					}
+					int decimalNumber = Integer.parseInt(y,2);
+
+					imagefile[j][i]=decimalNumber;
+					System.out.println(decimalNumber);
+				}else{
+					imagefile[j][i]= 256;
+					//System.out.println(277);
+				}
+				
+				
+				
+				
+				
 
 				//System.out.println(decimalNumber);
 			}
@@ -168,7 +199,8 @@ public class LbpMain {
 
 
 		//this part is for count histogram
-		for (int k = 0; k <256; k++) {
+		int count1=0;
+		for (int k = 0; k <=256; k++) {
 
 			int count=0;
 			for (int k2 = 0; k2 < height; k2++) {
@@ -180,21 +212,27 @@ public class LbpMain {
 				}
 
 			}
+			if(count!=0){
 			histogram[k]=count;
+			}
 		}
-		PrintWriter writer = new PrintWriter("D:/image/test.txt", "UTF-8");
-//		Writer writer = new BufferedWriter(new OutputStreamWriter(
-//				new FileOutputStream("D:/image/test.txt", true), "UTF-8"));
+		//PrintWriter writer = new PrintWriter("D:/image/test.txt", "UTF-8");
+		Writer writer = new BufferedWriter(new OutputStreamWriter(
+			new FileOutputStream("D:/image/uniformtest.txt", true), "UTF-8"));
 		String s="";
+		
 		for (int k = 0; k < 256; k++) {
 			//System.out.println(k+" "+histogram.get(k));
+			if(histogram[k]!=0){
 			s=s+k+"#"+histogram[k]+" ";
-
+			count1++;
+			}
 		}
-		 writer.append(s);
+		System.out.println(count1);
+		writer.append(s+"\n");
 		writer.close();
 
 
 	}
-
+	}
 }

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy element &apos;uniformLbpMain.java&apos; to &apos;SVN/src/du.iit.dhaka&apos;&#x0D;&#x0A;- Original project: &apos;UniformLBP&apos;&#x0D;&#x0A;- Destination element: &apos;SVN/src/du.iit.dhaka&apos;&#x0D;&#x0A;- Original element: &apos;lbp.Uniform.uniformLbpMain.java&apos;" description="Copy compilation unit" destination="=SVN/src&lt;du.iit.dhaka" element1="/src&lt;lbp.Uniform{uniformLbpMain.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1475430364195" units="1" version="1.0"/>
+</session>

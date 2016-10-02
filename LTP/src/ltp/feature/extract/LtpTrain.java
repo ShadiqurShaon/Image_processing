@@ -239,8 +239,8 @@ public class LtpTrain {
 //		Writer writer = new BufferedWriter(new OutputStreamWriter(
 //				new FileOutputStream("D:/image/test.txt", true), "UTF-8"));
 		Writer writer = new BufferedWriter(new OutputStreamWriter(
-		        new FileOutputStream("D:/image/train.txt", true), "UTF-8"));
-		String s="";
+		        new FileOutputStream("D:/image/trainltp.txt", true), "UTF-8"));
+		String s="3 ";
 		for (int k = 0; k < 256; k++) {
 			//System.out.println(k+" "+histogram.get(k));
 			s=s+k+"#"+histogramuppar[k]+" ";

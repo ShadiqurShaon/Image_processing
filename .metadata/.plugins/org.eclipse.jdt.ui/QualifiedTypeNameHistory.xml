@@ -42,4 +42,5 @@
 <fullyQualifiedTypeName name="lbp.Uniform.uniformLbpMain"/>
 <fullyQualifiedTypeName name="feature.lbp.LbpMain"/>
 <fullyQualifiedTypeName name="ltp.feature.extract.LtpTest"/>
+<fullyQualifiedTypeName name="lbp.Uniform.uniformLbpMaintrain"/>
 </qualifiedTypeNameHistroy>

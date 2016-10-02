@@ -10,8 +10,8 @@ public class MainMethod {
 	 */
 	public static void main(String[] args) throws IOException {
 		
-		LbpTest main=new LbpTest();
-		main.LBP();
+//		LbpTest main=new LbpTest();
+//		main.LBP();
 		
 		Test123 test=new Test123();
 		test.predict();

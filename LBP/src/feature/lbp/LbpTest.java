@@ -189,7 +189,7 @@ public class LbpTest {
 				histogram[k]=count;
 			}
 	         Writer writer = new BufferedWriter(new OutputStreamWriter(
-				        new FileOutputStream("D:/image/test2.txt", true), "UTF-8"));
+				        new FileOutputStream("D:/image/testlbp.txt", true), "UTF-8"));
 	        String s="";
 	         for (int k = 0; k < 256; k++) {
 				//System.out.println(k+" "+histogram.get(k));

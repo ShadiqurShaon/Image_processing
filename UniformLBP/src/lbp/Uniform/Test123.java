@@ -216,9 +216,9 @@ public class Test123
  {
  Test123 t123 = new Test123();
 
- svm_model model2 = t123.svmTrain("D:/image/train.txt", 90, 512); 
+ svm_model model2 = t123.svmTrain("D:/image/uniformtrain.txt", 90, 512); 
 
-	t123.evaluate_all_instances("D:/image/test2.txt", model2, 10);
+	t123.evaluate_all_instances("D:/image/uniformtest.txt", model2, 10);
 
  System.out.println("Operation complete");
  }
