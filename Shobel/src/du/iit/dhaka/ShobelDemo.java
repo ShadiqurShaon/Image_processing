@@ -21,14 +21,14 @@ public class ShobelDemo {
 		   int width;
 		   int height;
 		   
-		   File file=new File("D:/number/human.png");
+		   File file=new File("D:/number/s.png");
 		   image = ImageIO.read(file);
 		  
 		   
 		   width = image.getWidth();
 	       height = image.getHeight();
-	       System.out.println(width);
-	       System.out.println(height);
+//	       System.out.println(width);
+//	       System.out.println(height);
 	       int[][] imgArray=new int[height][width];
 	       Gx = new double[height][width];   
 	       Gy = new double[height][width];   
@@ -64,7 +64,7 @@ public class ShobelDemo {
 //		            double x=Gx[i][j]*Gx[i][j]; double y=Gy[i][j]*Gy[i][j];
 //		            int temp=(int) (x+y);
 //		            G[i][j]=Math.sqrt(temp);
-		            G[i][j]  = Math.abs(Gx[i][j]) + Math.abs(Gy[i][j]);   
+		            G[i][j]  =  Math.abs(Gy[i][j])+Math.abs(Gx[i][j]);   
 		          }     
 				
 				
@@ -103,7 +103,7 @@ public class ShobelDemo {
 		}
 	       System.out.println(imgArray.length);
 	      // System.out.println(c);
-	       File outputfile = new File("D:/number/saved.jpg");
+	       File outputfile = new File("D:/number/saved2.jpg");
 	         ImageIO.write(bufferImage2, "jpg", outputfile);
 		   
 		   

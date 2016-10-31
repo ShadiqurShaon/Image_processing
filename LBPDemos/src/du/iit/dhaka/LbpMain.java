@@ -24,7 +24,7 @@ public class LbpMain {
 		   int width;
 		   int height;
 		   
-		   File file=new File("D:/number/483493new.jpg");
+		   File file=new File("D:/number/human.PNG");
 		   image = ImageIO.read(file);
 	         width = image.getWidth();
 	         height = image.getHeight();
@@ -45,10 +45,11 @@ public class LbpMain {
 	                 Color newColor = new Color(red+green+blue,
 	                         
 	                         red+green+blue,red+green+blue);
-	                int tem=newColor.getRGB();
-	                imgval[j][i]=tem;
+	               // int tem=(newColor.getRed()+newColor.getGreen()+newColor.getBlue())/3;
+	               int tem=(int) (0.2989 * c.getRed() + 0.5870 * c.getGreen() + 0.1140 * c.getBlue()); 
+	                 imgval[j][i]=tem;
 	               // arr.add(imageVlaue/3);
-	               // System.out.println(tem);
+	                System.out.println(tem);
 	             }
 	          }
 	         
@@ -133,7 +134,7 @@ public class LbpMain {
 				}
 				cou++;
 			}
-	         System.out.println(cou);
+	        // System.out.println(cou);
 	         File outputfile = new File("D:/number/hull1.jpg");
 	         ImageIO.write(bufferImage2, "jpg", outputfile);
 	         

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy 5 elements to &apos;LGP/src/du.iit.dhaka&apos;&#x0D;&#x0A;- Original project: &apos;java&apos;&#x0D;&#x0A;- Destination element: &apos;LGP/src/du.iit.dhaka&apos;&#x0D;&#x0A;- Original elements:&#x0D;&#x0A;     svm_predict.java&#x0D;&#x0A;     svm_scale.java&#x0D;&#x0A;     svm_train.java&#x0D;&#x0A;     svm_toy.java&#x0D;&#x0A;     Test123.java" description="Copy compilation units" destination="=LGP/src&lt;du.iit.dhaka" element1="/&lt;{svm_predict.java" element2="/&lt;{svm_scale.java" element3="/&lt;{svm_train.java" element4="/&lt;{svm_toy.java" element5="/&lt;{Test123.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1477836337639" units="5" version="1.0"/>
+</session>

@@ -21,14 +21,15 @@ public class LbpMain {
 	 */
 	public static void main(String[] args) throws IOException {
 	
-		JFileChooser fc=new JFileChooser();
-		 fc.showOpenDialog(fc);
-		//File folder = new File("D:/Image/bubbly1");
-		 File folder =fc.getCurrentDirectory();
-		File[] listOfFiles = folder.listFiles();
-		for (int index = 0; index < listOfFiles.length; index++) {
+//		JFileChooser fc=new JFileChooser();
+//		 fc.showOpenDialog(fc);
+		
+//		 File folder =fc.getCurrentDirectory();
+//		File[] listOfFiles = folder.listFiles();
+//		for (int index = 0; index < listOfFiles.length; index++) {
 			int[] histogram=new int[256];
-			  File file = listOfFiles[index];
+			 // File file = listOfFiles[index];
+			File file = new File("D:/number/hog.png");
 			  System.out.println(file.getName());
 		BufferedImage image;
 		   int width;
@@ -82,7 +83,7 @@ public class LbpMain {
 	                 int tem=(newColor.getRed()+newColor.getGreen()+newColor.getBlue())/3;
 	                imgval[j][i]=tem;
 	               // arr.add(imageVlaue/3);
-	               // System.out.println(tem);
+	                System.out.println(tem);
 	             }
 	          }
 	         
@@ -200,4 +201,4 @@ public class LbpMain {
 		}
 	}
 
-}
+//}

@@ -1,0 +1,16 @@
+package du.iit.crope;
+
+public class Crop {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		javaxt.io.Image image = new javaxt.io.Image("C:/Users/Shaon/Desktop/New folder (2)/HS/34233661FCF.jpg");
+		image.rotate(30);
+		image.rotateCounterClockwise();
+		image.rotateClockwise();
+
+	}
+
+}

@@ -11,27 +11,27 @@ public class Grayscale {
 
 	
 	public static void main(String[] args) throws IOException {
-		File folder = new File("D:/Image/test");
-		File[] listOfFiles = folder.listFiles();
-		for (int index = 0; index < listOfFiles.length; index++) {
-			  File file = listOfFiles[index];
-			  if (file.isFile() && file.getName().endsWith(".jpg")) {
+		
+//		File[] listOfFiles = folder.listFiles();
+//		for (int index = 0; index < listOfFiles.length; index++) {
+//			  File file = listOfFiles[index];
+			  
 		BufferedImage image;
 		   int width;
 		   int height;
 		   
-		  
+		   File file=new File("D:/number/hog.png");
 		   image = ImageIO.read(file);
 	         width = image.getWidth();
 	         height = image.getHeight();
 	         
 	         int[][] imgval=new int[width][height];
 	         
-	         for(int i=0; i<height; i++){
+	         for(int i=0; i<width; i++){
 	             
-	             for(int j=0; j<width; j++){
+	             for(int j=0; j<height; j++){
 	             
-	                Color c = new Color(image.getRGB(j, i));
+	                Color c = new Color(image.getRGB(i, j));
 	               
 	                
 	                int red = (int)(c.getRed() * 0.299);
@@ -41,8 +41,10 @@ public class Grayscale {
 	                         
 	                         red+green+blue,red+green+blue);
 	                int tem=newColor.getRGB();
-	                imgval[j][i]=tem;
-	                System.out.println(tem);
+	                int tem2=(c.getRed()+c.getGreen()+c.getBlue())/3;
+	                // int tem= (int) (0.2989 * c.getRed() + 0.5870 * c.getGreen() + 0.1140 * c.getBlue()); 
+	                imgval[i][j]=tem;
+	                System.out.println(tem2);
 	              
 	             }
 	          }
@@ -60,7 +62,7 @@ public class Grayscale {
 				for (int k2 = 0; k2 < width; k2++) {
 					
 					int Pixel=imgval[k2][k];
-					System.out.println(Pixel);
+					//System.out.println(Pixel);
 					bufferImage2.setRGB(k2, k,Pixel);
 					
 				}
@@ -70,9 +72,9 @@ public class Grayscale {
 	         String s=file.getName();
 	         System.out.println(s);
 	         String[] result = s.split("\\.(?=[^\\.]+$)");
-	         s=result[0]+"new"+".jpg";
+	         s=result[0]+"newddd"+".jpg";
 	        
-	         File outputfile = new File("D:/Image/testgear/"+s);
+	         File outputfile = new File("D:/number/"+s);
 	         ImageIO.write(bufferImage2, "jpg", outputfile);
 	         
 	         
@@ -80,6 +82,6 @@ public class Grayscale {
 			  }
 			  
 		}
-			  }
+			//  }
 
-}
+

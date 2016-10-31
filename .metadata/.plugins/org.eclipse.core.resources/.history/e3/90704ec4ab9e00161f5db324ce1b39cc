@@ -1,0 +1,15 @@
+package du.iit.dhaka;
+
+public class Main {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		
+		Test123 test=new Test123();
+		test.predict();
+
+	}
+
+}

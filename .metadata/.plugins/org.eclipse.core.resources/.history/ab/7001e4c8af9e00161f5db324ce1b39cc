@@ -1,0 +1,24 @@
+package du.iit.dhaka;
+
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.util.Scanner;
+
+public class CountAccurate {
+
+	/**
+	 * @param args
+	 * @throws FileNotFoundException 
+	 */
+	public static void main(String[] args) throws FileNotFoundException {
+		
+		Scanner scanner = new Scanner(new File("C:/Users/Shaon/Desktop/face/list.txt"));
+		
+		while(scanner.hasNext()){
+			
+			System.out.println(scanner.nextInt());
+		}
+
+	}
+
+}
