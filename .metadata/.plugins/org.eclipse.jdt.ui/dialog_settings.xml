@@ -46,11 +46,12 @@
 	</section>
 	<section name="FatJarPackageWizard">
 		<item value="C:\Users\Shaon\workspace" key="FatJarPackageWizardPage.ANTSCRIPT_LOCATION"/>
-		<item value="MainMethod - java" key="FatJarPackageWizardPage.LAUNCH_CONFIGURATION_SELECTION_NAME"/>
-		<item value="C:\Users\Shaon\Desktop\de.jar" key="FatJarPackageWizardPage.DESTINATION_PATH_SELECTION"/>
+		<item value="Gui_Input_demo_for_php - jarDemo" key="FatJarPackageWizardPage.LAUNCH_CONFIGURATION_SELECTION_NAME"/>
+		<item value="C:\Users\Shaon\Desktop\guiinput.jar" key="FatJarPackageWizardPage.DESTINATION_PATH_SELECTION"/>
 		<item value="false" key="FatJarPackageWizardPage.ANTSCRIPT_SAVE"/>
 		<item value="1" key="FatJarPackageWizardPage.LIBRARY_HANDLING"/>
 		<list key="FatJarPackageWizardPage.DESTINATION_NAMES_ID">
+			<item value="C:\Users\Shaon\Desktop\guiinput.jar"/>
 			<item value="C:\Users\Shaon\Desktop\de.jar"/>
 			<item value="C:\xampp\htdocs\return.jar"/>
 		</list>

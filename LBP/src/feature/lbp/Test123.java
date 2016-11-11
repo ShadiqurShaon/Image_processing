@@ -1,6 +1,13 @@
 package feature.lbp;
 import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
 import java.io.FileReader;
+import java.io.IOException;
+import java.io.OutputStreamWriter;
+import java.io.UnsupportedEncodingException;
+import java.io.Writer;
 import java.util.LinkedList;
 import libsvm.svm;
 import libsvm.svm_model;
@@ -113,7 +120,7 @@ public class Test123
  }
  
  //write code to test all instances from given file
- public void evaluate_all_instances(String Filename1, svm_model model1, int record_size)
+ public void evaluate_all_instances(String Filename1, svm_model model1, int record_size) throws IOException
  {
  //read data from file
  //read the data from file and put it in the train module
@@ -186,7 +193,7 @@ public class Test123
  }
  }
  //write the code to test single feature each time by using SVM 
- public void evaluate_single_instance(int [] indexes, double[] values, svm_model model1) 
+ public void evaluate_single_instance(int [] indexes, double[] values, svm_model model1) throws IOException 
  {
      svm_node[] nodes = new svm_node[values.length];
      for (int i = 0; i < values.length; i++)
@@ -208,16 +215,21 @@ public class Test123
             {
          System.out.print("(" + labels[i] + ":" + prob_estimates[i] + ")");
      }
-     System.out.println(" Prediction:" + v );                       
+     Writer writer = new BufferedWriter(new OutputStreamWriter(
+		        new FileOutputStream("C:/Users/Shaon/Desktop/Data_Set/LBP/04List.txt", true), "UTF-8"));
+  writer.append( v+"\n");
+		  writer.close();
+  System.out.println(" Prediction:" + v );   
+     //System.out.println(" Prediction:" + v );                       
  }
 
- public  void predict()  
+ public  void predict() throws IOException  
  {
  Test123 t123 = new Test123();
 
- svm_model model2 = t123.svmTrain("D:/image/trainlbp.txt", 90, 256); 
+ svm_model model2 = t123.svmTrain("C:/Users/Shaon/Desktop/Data_Set/LBP/LBPtrain.txt", 400, 256); 
 
-	t123.evaluate_all_instances("D:/image/testlbp.txt", model2, 10);
+	t123.evaluate_all_instances("C:/Users/Shaon/Desktop/Data_Set/LBP/StripTest04.txt", model2, 100);
 
  System.out.println("Operation complete");
  }

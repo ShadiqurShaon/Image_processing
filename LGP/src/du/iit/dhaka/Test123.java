@@ -216,7 +216,7 @@ public class Test123
          System.out.print("(" + labels[i] + ":" + prob_estimates[i] + ")");
      }
      Writer writer = new BufferedWriter(new OutputStreamWriter(
-		        new FileOutputStream("C:/Users/Shaon/Desktop/face/list.txt", true), "UTF-8"));
+		        new FileOutputStream("C:/Users/Shaon/Desktop/Combined/newdataset/list.txt", true), "UTF-8"));
      writer.append( v+"\n");
 		  writer.close();
      System.out.println(" Prediction:" + v );                       
@@ -226,9 +226,9 @@ public class Test123
  {
  Test123 t123 = new Test123();
 
- svm_model model2 = t123.svmTrain("C:/Users/Shaon/Desktop/face/lgptrain.txt",2000, 256); 
+ svm_model model2 = t123.svmTrain("C:/Users/Shaon/Desktop/Combined/newdataset/lgptrain.txt",299, 256); 
 
-	t123.evaluate_all_instances("C:/Users/Shaon/Desktop/face/test.txt", model2,100);
+	t123.evaluate_all_instances("C:/Users/Shaon/Desktop/Combined/newdataset/lgptest.txt", model2,49);
 
  System.out.println("Operation complete");
  }

@@ -115,7 +115,7 @@ public class LtpTest {
 							if(imgval[j1][i1]>=imgval[j+1][i+1]+5){
 								binary[bin1][bin2]=1;
 							}else if(Math.abs(imgval[j1][i1]-imgval[j+1][i+1])<5){binary[bin1][bin2]=0;}
-							else if(imgval[j1][i1]-5<imgval[j+1][i+1]){
+							else if(imgval[j1][i1]<=imgval[j+1][i+1]-5){
 								binary[bin1][bin2]=-1;
 							}
 

@@ -165,7 +165,7 @@ public class LtpTrain {
 				int decimalNumberuppar = Integer.parseInt(y,2);
 
 				imagefileuppar[j][i]=decimalNumberuppar;
-				System.out.println(decimalNumberuppar);
+				//System.out.println(decimalNumberuppar);
 				String s1=null;
 				String y1 = "0";
 				for(int i1=0;i1<binaryarrayloar.length;i1++){
@@ -177,7 +177,7 @@ public class LtpTrain {
 				int decimalNumberloar = Integer.parseInt(y1,2);
 
 				imagefileloar[j][i]=decimalNumberloar;
-				System.out.println(decimalNumberloar);
+				//System.out.println(decimalNumberloar);
 			}
 		}
 
@@ -239,14 +239,14 @@ public class LtpTrain {
 //		Writer writer = new BufferedWriter(new OutputStreamWriter(
 //				new FileOutputStream("D:/image/test.txt", true), "UTF-8"));
 		Writer writer = new BufferedWriter(new OutputStreamWriter(
-		        new FileOutputStream("D:/image/trainltp.txt", true), "UTF-8"));
-		String s="3 ";
+		        new FileOutputStream("C:/Users/Shaon/Desktop/Data_Set/LTPtest.txt", true), "UTF-8"));
+		String s="";
 		for (int k = 0; k < 256; k++) {
 			//System.out.println(k+" "+histogram.get(k));
 			s=s+k+"#"+histogramuppar[k]+" ";
 
 		}
-		String s1="";
+		String s1="1 ";
 		for (int k = 0; k < 256; k++) {
 			//System.out.println(k+" "+histogram.get(k));
 				int i=k+256;

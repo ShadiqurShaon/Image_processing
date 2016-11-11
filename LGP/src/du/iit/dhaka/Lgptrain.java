@@ -187,7 +187,7 @@ public class Lgptrain {
 //		}
 			         
 			         Writer writer = new BufferedWriter(new OutputStreamWriter(
-						        new FileOutputStream("C:/Users/Shaon/Desktop/face/test.txt", true), "UTF-8"));
+						        new FileOutputStream("C:/Users/Shaon/Desktop/Combined/newdataset/lgptest.txt", true), "UTF-8"));
 			        String s="";
 			         for (int k = 0; k < 256; k++) {
 						//System.out.println(k+" "+histogram.get(k));

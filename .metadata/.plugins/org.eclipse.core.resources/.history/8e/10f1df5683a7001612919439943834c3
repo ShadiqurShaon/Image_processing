@@ -1,0 +1,36 @@
+package du.iit.dhaka;
+
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.util.Scanner;
+
+public class Calculation {
+
+	/**
+	 * @param args
+	 * @throws FileNotFoundException 
+	 */
+	public static void main(String[] args) throws FileNotFoundException {
+		
+	
+		 Scanner input = new Scanner (new File("C:/Users/Shaon/Desktop/Data_Set/LBP/LBPcal.txt"));
+	        int m = 3;
+	        int n = 5;
+	        int[][] a = new int [m][n];
+	        while (input.next()!=null){
+	            for (int i=0;i<m;i++){
+	                for (int j=0;j<n;j++)
+	                    a[i][j]= input.nextInt();
+	            }   
+
+	        }
+	        //print the input matrix
+	        System.out.println("The input sorted matrix is : ");
+	        for(int i=0;i<m;i++){
+	            for(int j=0;j<n;j++)
+	                System.out.println(a[i][j]);
+
+	}
+
+}
+}
